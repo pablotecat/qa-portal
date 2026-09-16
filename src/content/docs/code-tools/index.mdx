@@ -1,0 +1,53 @@
+---
+title: Code, Tools & Repositories
+description: Discover owned QA snippets, tools, libraries, and repositories with usage context.
+owner: 'TODO: Add catalog owner'
+status: 'Placeholder catalog'
+scope: 'Cross-project'
+tags: [code, tools, repositories]
+---
+
+import ResourceCard from '../../../components/ResourceCard.astro';
+import PlaceholderNotice from '../../../components/PlaceholderNotice.astro';
+
+<PlaceholderNotice>
+  The records below demonstrate the catalog shape only. They do not name real tools, repositories, or approved technology.
+</PlaceholderNotice>
+
+## Resource catalog
+
+<div class="resource-grid">
+  <ResourceCard type="Snippet" title="Example: reusable test helper" purpose="Placeholder purpose and expected outcome." technologies={['TODO: Technology']} warning="Example only. Replace with validated usage constraints." />
+  <ResourceCard type="Tool" title="Example: QA utility" purpose="Placeholder description of the problem this tool solves." technologies={['TODO: Platform']} warning="Approval and support status are not defined." />
+  <ResourceCard type="Repository" title="Example: automation repository" purpose="Placeholder description of repository scope and audience." technologies={['TODO: Stack']} warning="Repository URL and maintenance expectations are pending." />
+</div>
+
+## Example snippet presentation
+
+The portal provides syntax highlighting and a copy action without an additional integration.
+
+:::caution[Example only]
+This code demonstrates presentation, not an approved helper or test convention.
+:::
+
+```ts title="example-only.ts"
+export function placeholderCheck(): never {
+  throw new Error(
+    'TODO: Add reviewed code',
+  );
+}
+```
+
+## Catalog fields
+
+| Field | Purpose |
+| --- | --- |
+| Purpose | State what problem the resource solves |
+| Owner | Identify who can validate and maintain it |
+| Technologies | Support discovery by stack or platform |
+| Link | Point to the canonical source |
+| Status | Communicate an agreed lifecycle state |
+| Last reviewed | Expose staleness |
+| Usage warning | Prevent unsafe or unsupported use |
+
+Create records from `code-snippet.md` or `tool-or-repository.md` in the source `templates/` directory.

@@ -1,0 +1,44 @@
+---
+title: Templates & Checklists
+description: Reusable source templates for consistent QA knowledge records.
+owner: 'TODO: Add template library owner'
+status: 'Foundation ready'
+scope: 'Portal content'
+tags: [templates, checklists]
+---
+
+import PlaceholderNotice from '../../../components/PlaceholderNotice.astro';
+
+<PlaceholderNotice title="Templates are structures, not policy">
+  Section headings and metadata fields are starting points. Replace every TODO and validate the result with the appropriate QA owner before presenting it as approved content.
+</PlaceholderNotice>
+
+## Available source templates
+
+The editable files live in the repository's top-level `templates/` directory.
+
+| Template | Source file | Intended record |
+| --- | --- | --- |
+| Standard or policy | `standard-or-policy.md` | Approved standards, policies, or principles |
+| Guide or best practice | `guide-or-best-practice.md` | Practical guidance, patterns, and tutorials |
+| Testing practice | `testing-practice.md` | A discipline-specific practice page |
+| Code snippet | `code-snippet.md` | Reusable code with context and limitations |
+| Tool or repository | `tool-or-repository.md` | An owned resource reference |
+| Checklist | `checklist.md` | A scoped, reviewable checklist |
+| Meeting or recording | `meeting-or-recording.md` | Notes, recordings, actions, and materials |
+| Decision record | `decision-record.md` | Context, options, outcome, and consequences |
+| Proposal or roadmap item | `proposal-or-roadmap-item.md` | A visible idea or planned change |
+
+## How to use a template
+
+1. Copy the closest source template into the appropriate directory under `src/content/docs/`.
+2. Rename it with a short, lowercase, hyphen-separated filename.
+3. Replace every `TODO` and keep uncertain statements visibly marked.
+4. Add the new page to navigation only when it should be discoverable.
+5. Run `npm run check` and `npm run build` before requesting review.
+
+The contribution and approval model is still pending. See [Contribute](../contribute/) for the current neutral workflow.
+
+## Future checklist library
+
+Reserved for QA-authored test plans, test cases, exploratory charters, bug reports, release checks, automation proposals, and additional document types. No example checklist is an active company requirement.

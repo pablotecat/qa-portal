@@ -1,0 +1,63 @@
+---
+title: Contribute
+description: Neutral guidance for adding and improving QA knowledge through GitHub.
+owner: 'TODO: Add contribution owner'
+status: 'Provisional guidance'
+scope: 'Portal contributors'
+tags: [contributing, documentation]
+---
+
+import PlaceholderNotice from '../../../components/PlaceholderNotice.astro';
+
+<PlaceholderNotice title="Review and approval model pending">
+  This page explains how the repository can be changed, but it does not establish mandatory reviewers, approval gates, ownership rules, or branch protection.
+</PlaceholderNotice>
+
+## Before you write
+
+- Search the portal to avoid duplicating an existing record.
+- Choose the closest file from the top-level `templates/` directory.
+- Confirm that no secrets, sensitive findings, personal data, or heavy binary files are included.
+- Identify unresolved facts as `TODO`, `Placeholder`, or `Example`.
+
+## Suggested GitHub workflow
+
+This is a provisional collaboration path, not an approved company process:
+
+1. Create a short-lived branch from the current default branch.
+2. Add or edit Markdown, MDX, or supporting presentation files.
+3. Run `npm run check` and `npm run build` locally.
+4. Open a pull request that explains the purpose, scope, owner, and validation performed.
+5. Ask an appropriate subject-matter expert to validate technical content.
+
+## Add a new page
+
+1. Copy a source template to the appropriate directory under `src/content/docs/`.
+2. Use a lowercase, hyphen-separated filename such as `service-test-data.md`.
+3. Set a unique title and useful description.
+4. Replace all template instructions and unresolved fields.
+5. Use relative links for internal content so GitHub Pages route changes remain portable.
+6. Add the page to `astro.config.mjs` when it belongs in the sidebar.
+
+## Content principles
+
+- Keep one canonical home for each fact or decision.
+- Separate organizational standards from examples and local experience.
+- Name ownership, scope, status, and review information where known.
+- Link externally hosted recordings and large documents instead of committing binaries.
+- Explain limitations and usage warnings for tools and snippets.
+- Prefer clear language and descriptive link text.
+
+## Decisions still open
+
+The QA team still needs to approve:
+
+- Content states and what each state means.
+- Required metadata beyond title and description.
+- Reviewers or owners by knowledge area.
+- Pull request approval expectations.
+- Review frequency and archival policy.
+- `CODEOWNERS`, issue templates, and branch protection.
+- Feedback, analytics, and content health reporting.
+
+Until those decisions are made, repository automation will not enforce them.

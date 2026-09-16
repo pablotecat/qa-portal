@@ -1,0 +1,15 @@
+# Build output and generated types
+dist/
+.astro/
+
+# Dependencies
+node_modules/
+
+# Environment files
+.env
+.env.production
+
+# Logs and operating-system files
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,58 @@
+---
+interface Props {
+  title?: string;
+}
+
+const { title = 'Content awaiting QA input' } = Astro.props;
+---
+
+<aside class="placeholder-notice">
+  <span class="placeholder-label">Placeholder</span>
+  <div>
+    <strong>{title}</strong>
+    <div class="placeholder-copy"><slot /></div>
+  </div>
+</aside>
+
+<style>
+  .placeholder-notice {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: start;
+    margin: 1.5rem 0 2rem;
+    padding: 1rem;
+    border: 1px solid var(--sl-color-orange-low);
+    border-left: 4px solid var(--sl-color-orange);
+    background: color-mix(in srgb, var(--sl-color-orange-low) 45%, var(--sl-color-bg));
+  }
+
+  .placeholder-label {
+    padding: 0.18rem 0.42rem;
+    color: var(--sl-color-black);
+    background: var(--sl-color-orange-high);
+    font-family: var(--sl-font-mono);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  strong {
+    display: block;
+    color: var(--sl-color-white);
+  }
+
+  .placeholder-copy :global(p) {
+    margin: 0.35rem 0 0;
+    color: var(--sl-color-gray-2);
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 30rem) {
+    .placeholder-notice {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

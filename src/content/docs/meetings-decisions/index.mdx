@@ -1,0 +1,46 @@
+---
+title: Meetings & Decisions
+description: A traceable index for QA recordings, notes, decisions, actions, and supporting material.
+owner: 'TODO: Add owner'
+status: 'Placeholder index'
+scope: 'QA chapter'
+tags: [meetings, decisions]
+---
+
+import EntryCard from '../../../components/EntryCard.astro';
+import PlaceholderNotice from '../../../components/PlaceholderNotice.astro';
+
+<PlaceholderNotice>
+  No real meeting, participant, recording, or decision is represented below. Store recordings externally and link to them only where access is appropriate.
+</PlaceholderNotice>
+
+## Record index
+
+<div class="entry-grid">
+  <EntryCard kind="Meeting" title="Example: chapter session" summary="Placeholder for a meeting summary, actions, and external recording link." />
+  <EntryCard kind="Decision" title="Example: documented decision" summary="Placeholder for decision context, options, outcome, and consequences." />
+  <EntryCard kind="Meeting" title="Example: practice review" summary="Placeholder for reviewed material, participants, and follow-up actions." />
+</div>
+
+## Meeting record shape
+
+Each meeting or recording record can include:
+
+- Title and date.
+- Participants, using only information appropriate for the repository.
+- External video link with access context.
+- Summary and topics discussed.
+- Decisions and action items.
+- Related materials and records.
+
+## Decision record shape
+
+Each decision record can include:
+
+- Context and decision question.
+- Options considered.
+- Outcome and rationale.
+- Consequences and follow-up.
+- Owner, status, date, and related links.
+
+Use the meeting and decision templates in the source `templates/` directory. Do not commit videos or other heavy binary files.

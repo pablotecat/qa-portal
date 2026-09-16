@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" role="img" aria-labelledby="title description">
+  <title id="title">Quality knowledge map</title>
+  <desc id="description">Connected documentation cards surrounding a central verified check.</desc>
+  <rect width="560" height="420" rx="20" fill="#0b1f26"/>
+  <path d="M280 77v58M280 285v58M113 210h93M354 210h93M162 112l72 63M398 112l-72 63M162 308l72-63M398 308l-72-63" stroke="#31505a" stroke-width="3" stroke-dasharray="8 10"/>
+  <g fill="#102d35" stroke="#3d6971" stroke-width="2">
+    <rect x="224" y="31" width="112" height="48" rx="4"/>
+    <rect x="224" y="341" width="112" height="48" rx="4"/>
+    <rect x="47" y="186" width="116" height="48" rx="4"/>
+    <rect x="397" y="186" width="116" height="48" rx="4"/>
+    <rect x="75" y="73" width="124" height="48" rx="4"/>
+    <rect x="361" y="73" width="124" height="48" rx="4"/>
+    <rect x="75" y="299" width="124" height="48" rx="4"/>
+    <rect x="361" y="299" width="124" height="48" rx="4"/>
+  </g>
+  <g fill="#8eafb5">
+    <rect x="244" y="48" width="72" height="6" rx="3"/><rect x="244" y="60" width="48" height="5" rx="2.5"/>
+    <rect x="244" y="357" width="72" height="6" rx="3"/><rect x="244" y="369" width="48" height="5" rx="2.5"/>
+    <rect x="67" y="202" width="76" height="6" rx="3"/><rect x="67" y="214" width="54" height="5" rx="2.5"/>
+    <rect x="417" y="202" width="76" height="6" rx="3"/><rect x="417" y="214" width="54" height="5" rx="2.5"/>
+    <rect x="95" y="89" width="84" height="6" rx="3"/><rect x="95" y="101" width="58" height="5" rx="2.5"/>
+    <rect x="381" y="89" width="84" height="6" rx="3"/><rect x="381" y="101" width="58" height="5" rx="2.5"/>
+    <rect x="95" y="315" width="84" height="6" rx="3"/><rect x="95" y="327" width="58" height="5" rx="2.5"/>
+    <rect x="381" y="315" width="84" height="6" rx="3"/><rect x="381" y="327" width="58" height="5" rx="2.5"/>
+  </g>
+  <rect x="206" y="136" width="148" height="148" rx="12" fill="#f4f1e9"/>
+  <path d="m239 211 26 26 57-61" fill="none" stroke="#147d70" stroke-width="15" stroke-linecap="square" stroke-linejoin="miter"/>
+  <path d="M224 153h38M224 165h24" stroke="#f2b84b" stroke-width="5"/>
+  <circle cx="336" cy="266" r="5" fill="#0b1f26"/>
+</svg>

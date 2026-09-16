@@ -1,0 +1,106 @@
+---
+interface Props {
+  kind: 'Meeting' | 'Decision' | 'Proposal' | 'Roadmap item';
+  title: string;
+  summary: string;
+  date?: string;
+  status?: string;
+  owner?: string;
+  href?: string;
+}
+
+const {
+  kind,
+  title,
+  summary,
+  date = 'TODO: Add date',
+  status = 'TODO: Define status',
+  owner = 'TODO: Add owner',
+  href,
+} = Astro.props;
+---
+
+<article class="entry-card">
+  <div class="entry-rail" aria-hidden="true"></div>
+  <div class="entry-body">
+    <div class="entry-topline"><span>{kind}</span><span>{status}</span></div>
+    <h3>{title}</h3>
+    <p>{summary}</p>
+    <dl>
+      <div><dt>Date</dt><dd>{date}</dd></div>
+      <div><dt>Owner</dt><dd>{owner}</dd></div>
+    </dl>
+    {href && <a href={href}>View record <span aria-hidden="true">→</span></a>}
+  </div>
+</article>
+
+<style>
+  .entry-card {
+    display: grid;
+    grid-template-columns: 0.3rem 1fr;
+    min-height: 100%;
+    border: 1px solid var(--sl-color-gray-5);
+    background: var(--sl-color-bg-nav);
+  }
+
+  .entry-rail {
+    background: var(--sl-color-accent);
+  }
+
+  .entry-body {
+    display: flex;
+    flex-direction: column;
+    padding: 1.1rem;
+  }
+
+  .entry-topline {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    color: var(--sl-color-gray-3);
+    font-family: var(--sl-font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    margin: 0.75rem 0 0;
+    color: var(--sl-color-white);
+    font-size: 1rem;
+  }
+
+  p {
+    flex: 1;
+    color: var(--sl-color-gray-2);
+    font-size: 0.86rem;
+  }
+
+  dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin: 0.8rem 0 0;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--sl-color-gray-5);
+  }
+
+  dt {
+    color: var(--sl-color-gray-3);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+  }
+
+  dd {
+    margin: 0.15rem 0 0;
+    color: var(--sl-color-gray-1);
+    font-size: 0.75rem;
+  }
+
+  a {
+    margin-top: 0.85rem;
+    font-family: var(--sl-font-mono);
+    font-size: 0.76rem;
+    font-weight: 700;
+  }
+</style>

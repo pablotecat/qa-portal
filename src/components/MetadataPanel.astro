@@ -1,0 +1,130 @@
+---
+interface Props {
+  owner?: string;
+  status?: string;
+  scope?: string;
+  lastReviewed?: string;
+  reviewCycle?: string;
+  tags?: string[];
+}
+
+const {
+  owner = 'TODO: Add owner',
+  status = 'TODO: Define status',
+  scope = 'TODO: Define scope',
+  lastReviewed = 'TODO: Add date',
+  reviewCycle = 'TODO: Define review cycle',
+  tags = [],
+} = Astro.props;
+
+const fields = [
+  ['Owner', owner],
+  ['Status', status],
+  ['Scope', scope],
+  ['Last reviewed', lastReviewed],
+  ['Review cycle', reviewCycle],
+];
+---
+
+<section class="metadata-panel" aria-label="Content metadata">
+  <p class="metadata-heading">Content record</p>
+  <dl>
+    {fields.map(([label, value]) => (
+      <div>
+        <dt>{label}</dt>
+        <dd>{value}</dd>
+      </div>
+    ))}
+  </dl>
+  {tags.length > 0 && (
+    <div class="tags" aria-label="Tags">
+      {tags.map((tag) => <span>{tag}</span>)}
+    </div>
+  )}
+</section>
+
+<style>
+  .metadata-panel {
+    margin: 1.5rem 0 2rem;
+    border: 1px solid var(--sl-color-gray-5);
+    background: var(--sl-color-bg-nav);
+  }
+
+  .metadata-heading {
+    margin: 0;
+    padding: 0.65rem 1rem;
+    border-bottom: 1px solid var(--sl-color-gray-5);
+    color: var(--sl-color-accent-high);
+    font-family: var(--sl-font-mono);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  dl {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    margin: 0;
+  }
+
+  dl div {
+    min-width: 0;
+    padding: 0.85rem 1rem;
+    border-right: 1px solid var(--sl-color-gray-5);
+  }
+
+  dl div:last-child {
+    border-right: 0;
+  }
+
+  dt {
+    color: var(--sl-color-gray-3);
+    font-family: var(--sl-font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  dd {
+    margin: 0.25rem 0 0;
+    color: var(--sl-color-white);
+    font-size: 0.82rem;
+    overflow-wrap: anywhere;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    padding: 0 1rem 1rem;
+  }
+
+  .tags span {
+    padding: 0.15rem 0.45rem;
+    border: 1px solid var(--sl-color-gray-5);
+    color: var(--sl-color-gray-2);
+    font-family: var(--sl-font-mono);
+    font-size: 0.7rem;
+  }
+
+  @media (max-width: 60rem) {
+    dl {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    dl div {
+      border-bottom: 1px solid var(--sl-color-gray-5);
+    }
+  }
+
+  @media (max-width: 30rem) {
+    dl {
+      grid-template-columns: 1fr;
+    }
+
+    dl div {
+      border-right: 0;
+    }
+  }
+</style>

@@ -1,0 +1,41 @@
+---
+title: Roadmap & Proposals
+description: A visible home for QA initiatives, proposals, and future work.
+owner: 'TODO: Add roadmap owner'
+status: 'Placeholder index'
+scope: 'QA chapter'
+tags: [roadmap, proposals]
+---
+
+import EntryCard from '../../../components/EntryCard.astro';
+import PlaceholderNotice from '../../../components/PlaceholderNotice.astro';
+
+<PlaceholderNotice>
+  The entries below are examples of presentation only. They are not real commitments, priorities, identifiers, or delivery dates.
+</PlaceholderNotice>
+
+## Initiative index
+
+<div class="entry-grid">
+  <EntryCard kind="Proposal" title="Example: proposed QA improvement" summary="Placeholder for a problem statement, expected outcome, options, and feedback." />
+  <EntryCard kind="Roadmap item" title="Example: planned knowledge work" summary="Placeholder for scope, dependencies, progress, and links to canonical tracking." />
+  <EntryCard kind="Proposal" title="Example: practice addition" summary="Placeholder for proposing a new testing discipline or portal capability." />
+</div>
+
+## Record boundaries
+
+This portal should explain initiatives and preserve their context. If GitHub Issues or Projects become the source of truth for execution, records here should link to them rather than duplicate changing task details.
+
+## Proposed record fields
+
+| Field | Purpose |
+| --- | --- |
+| Problem or opportunity | Explain why the work is being considered |
+| Outcome | Describe the intended result without inventing a commitment |
+| Scope and exclusions | Keep the proposal bounded |
+| Owner | Identify the person or group maintaining the record |
+| Status | Use a lifecycle only after the team approves it |
+| Dependencies | Expose coordination needs |
+| Related tracking | Link to the canonical issue, project, or repository |
+
+Use `proposal-or-roadmap-item.md` for new records. Integration with GitHub Issues or Projects remains a pending decision.
