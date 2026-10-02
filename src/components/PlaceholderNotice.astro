@@ -22,26 +22,25 @@ const { title = 'Content awaiting QA input' } = Astro.props;
     align-items: start;
     margin: 1.5rem 0 2rem;
     padding: 1rem;
-    border: 1px solid var(--sl-color-orange-low);
-    border-left: 4px solid var(--sl-color-orange);
-    background: color-mix(in srgb, var(--sl-color-orange-low) 45%, var(--sl-color-bg));
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--warning);
+    border-radius: var(--radius);
+    background: var(--card);
   }
 
   .placeholder-label {
     padding: 0.18rem 0.42rem;
-    color: var(--sl-color-black);
-    background: var(--sl-color-orange-high);
-    font-family: var(--sl-font-mono);
-    font-size: 0.68rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
+    color: var(--warning-ink);
+    background: var(--warning-surface);
+    border-radius: var(--radius);
+    font-size: 0.75rem;
+    font-weight: 600;
     line-height: 1.4;
-    text-transform: uppercase;
   }
 
   strong {
     display: block;
-    color: var(--sl-color-white);
+    color: var(--foreground);
   }
 
   .placeholder-copy :global(p) {

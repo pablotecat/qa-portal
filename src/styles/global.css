@@ -1,44 +1,106 @@
+/* Platform semantic slots; Starlight's variables below adapt its UI to the same theme. */
 :root {
-  --sl-color-accent-low: #123c3c;
-  --sl-color-accent: #20c6ad;
-  --sl-color-accent-high: #bdfcf1;
-  --sl-color-orange-low: #4a3517;
-  --sl-color-orange: #f2b84b;
-  --sl-color-orange-high: #ffe2a6;
-  --sl-font: "Aptos", "Segoe UI", system-ui, sans-serif;
-  --sl-font-mono: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+  --background: #0d0e0f;
+  --foreground: #fafafc;
+  --card: #17181b;
+  --primary: #2f69ff;
+  --primary-foreground: #ffffff;
+  --secondary: #22242a;
+  --muted: #22242a;
+  --muted-foreground: #8e8f95;
+  --accent: #17244a;
+  --accent-foreground: #dce6ff;
+  --border: #2a2c33;
+  --ring: #5282ff;
+  --warning: #fbc740;
+  --warning-surface: #feeec6;
+  --warning-foreground: #a6842a;
+  --warning-ink: #0d0e0f;
+  --info: #00b5f1;
+  --success: #3abaaf;
+  --destructive: #f33859;
+  --radius: 0.375rem;
+
+  --sl-color-white: var(--foreground);
+  --sl-color-gray-1: #e9eaf2;
+  --sl-color-gray-2: #dfe1ec;
+  --sl-color-gray-3: var(--muted-foreground);
+  --sl-color-gray-4: #6a6f74;
+  --sl-color-gray-5: var(--border);
+  --sl-color-gray-6: var(--secondary);
+  --sl-color-black: var(--background);
+  --sl-color-accent-low: var(--accent);
+  --sl-color-accent: var(--primary);
+  --sl-color-accent-high: var(--accent-foreground);
+  --sl-color-text-accent: var(--accent-foreground);
+  --sl-color-bg: var(--background);
+  --sl-color-bg-nav: var(--card);
+  --sl-color-bg-sidebar: var(--card);
+  --sl-color-bg-inline-code: var(--secondary);
+  --sl-color-bg-accent: var(--accent);
+  --sl-color-banner-text: var(--accent-foreground);
+  --sl-color-hairline-light: var(--border);
+  --sl-color-hairline: var(--border);
+  --sl-color-hairline-shade: var(--border);
+  --sl-color-orange-low: #473714;
+  --sl-color-orange: var(--warning);
+  --sl-color-orange-high: var(--warning-surface);
+  --sl-shadow-sm: none;
+  --sl-shadow-md: none;
+  --sl-shadow-lg: none;
+  --sl-font: 'Outfit', system-ui, sans-serif;
   --sl-content-width: 52rem;
 }
 
 :root[data-theme='light'] {
-  --sl-color-accent-low: #d7f5ef;
-  --sl-color-accent: #006b60;
-  --sl-color-accent-high: #074c46;
-  --sl-color-orange-low: #fff1d5;
-  --sl-color-orange: #9b6400;
-  --sl-color-orange-high: #633f00;
-  --sl-color-bg: #f6f4ed;
-  --sl-color-bg-nav: #fffdf8;
-  --sl-color-bg-sidebar: #efede5;
-}
+  --background: #ffffff;
+  --foreground: #0d0e0f;
+  --card: #ffffff;
+  --secondary: #f2f3f7;
+  --muted: #f2f3f7;
+  --muted-foreground: #6a6f74;
+  --accent: #ebf0ff;
+  --accent-foreground: #0032b2;
+  --border: #e9eaf2;
+  --ring: #2f69ff;
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  letter-spacing: 0.002em;
+  --sl-color-white: var(--foreground);
+  --sl-color-gray-1: #383838;
+  --sl-color-gray-2: #4a4a4a;
+  --sl-color-gray-3: var(--muted-foreground);
+  --sl-color-gray-4: #8e8f95;
+  --sl-color-gray-5: var(--border);
+  --sl-color-gray-6: var(--secondary);
+  --sl-color-gray-7: #fafafc;
+  --sl-color-black: var(--background);
+  --sl-color-accent-low: var(--accent);
+  --sl-color-accent: var(--primary);
+  --sl-color-accent-high: var(--accent-foreground);
+  --sl-color-text-accent: var(--accent-foreground);
+  --sl-color-bg: var(--background);
+  --sl-color-bg-nav: var(--card);
+  --sl-color-bg-sidebar: #fafafc;
+  --sl-color-bg-inline-code: var(--secondary);
+  --sl-color-bg-accent: var(--accent);
+  --sl-color-banner-text: var(--accent-foreground);
+  --sl-color-hairline-light: var(--border);
+  --sl-color-hairline: var(--border);
+  --sl-color-hairline-shade: var(--border);
+  --sl-color-orange-low: var(--warning-surface);
+  --sl-color-orange: var(--warning);
+  --sl-color-orange-high: var(--warning-foreground);
+  --sl-shadow-sm: none;
+  --sl-shadow-md: none;
+  --sl-shadow-lg: none;
 }
 
 :focus-visible {
-  outline: 3px solid var(--sl-color-orange);
-  outline-offset: 3px;
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
 }
 
 .site-title {
-  font-family: var(--sl-font-mono);
-  font-size: 0.9rem;
-  letter-spacing: 0.02em;
+  font-weight: 700;
 }
 
 .site-title img {
@@ -46,24 +108,22 @@ body {
   height: 2.15rem;
 }
 
-.header {
-  border-bottom-color: var(--sl-color-gray-5);
-}
-
+.header,
 .sidebar-pane {
-  border-inline-end-color: var(--sl-color-gray-5);
+  border-color: var(--border);
 }
 
 .sidebar-content a[aria-current='page'] {
-  border-inline-start: 3px solid var(--sl-color-accent);
-  background: color-mix(in srgb, var(--sl-color-accent-low) 55%, transparent);
-  font-weight: 700;
+  border-inline-start: 3px solid var(--primary);
+  border-radius: var(--radius);
+  background: var(--accent);
+  font-weight: 600;
 }
 
 .sidebar-content a[aria-current='page'] > span,
 nav[aria-labelledby='starlight__on-this-page'] a[aria-current='true'],
 nav[aria-labelledby='starlight__on-this-page'] a[aria-current='true'] span {
-  color: var(--sl-color-accent-high);
+  color: var(--accent-foreground);
 }
 
 .expressive-code pre {
@@ -73,18 +133,11 @@ nav[aria-labelledby='starlight__on-this-page'] a[aria-current='true'] span {
 
 .sl-markdown-content h2 {
   padding-top: 0.45rem;
-  border-top: 1px solid var(--sl-color-gray-5);
-}
-
-.sl-markdown-content h2::before {
-  content: '// ';
-  color: var(--sl-color-accent);
-  font-family: var(--sl-font-mono);
-  font-weight: 500;
+  border-top: 1px solid var(--border);
 }
 
 .sl-markdown-content h3 {
-  color: var(--sl-color-white);
+  color: var(--foreground);
 }
 
 .sl-markdown-content table {
@@ -93,23 +146,33 @@ nav[aria-labelledby='starlight__on-this-page'] a[aria-current='true'] span {
 }
 
 .sl-markdown-content th {
-  color: var(--sl-color-accent-high);
-  font-family: var(--sl-font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  color: var(--foreground);
+  font-weight: 600;
 }
 
+.starlight-aside {
+  --sl-color-asides-text-accent: var(--foreground);
+  border: 1px solid var(--border);
+  border-inline-start: 4px solid var(--sl-color-asides-border);
+  border-radius: var(--radius);
+  background: var(--card);
+}
+
+.starlight-aside--note { --sl-color-asides-border: var(--info); }
+.starlight-aside--tip { --sl-color-asides-border: var(--success); }
+.starlight-aside--caution { --sl-color-asides-border: var(--warning); }
+.starlight-aside--danger { --sl-color-asides-border: var(--destructive); }
+
 .hero {
-  border-bottom: 1px solid var(--sl-color-gray-5);
+  border-bottom: 1px solid var(--border);
 }
 
 .hero h1 {
-  max-width: 10ch;
-  font-family: var(--sl-font-mono);
-  font-size: clamp(2.6rem, 6vw, 5rem);
-  letter-spacing: -0.075em;
-  line-height: 0.95;
+  max-width: 12ch;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
 }
 
 .hero .tagline {
@@ -119,38 +182,51 @@ nav[aria-labelledby='starlight__on-this-page'] a[aria-current='true'] span {
 }
 
 .hero img {
-  border: 1px solid var(--sl-color-gray-5);
-  box-shadow: 1rem 1rem 0 color-mix(in srgb, var(--sl-color-accent) 20%, transparent);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
 }
 
-.hero .action {
-  border-radius: 0;
-  font-family: var(--sl-font-mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.02em;
+.hero .action,
+.sl-link-button,
+.contribution-callout a {
+  border-radius: var(--radius);
+  font-family: var(--sl-font);
+  font-weight: 600;
+  transition: color 150ms ease-out, background-color 150ms ease-out, border-color 150ms ease-out;
+}
+
+.sl-link-button.primary {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.sl-link-button.primary:hover {
+  border-color: var(--accent-foreground);
+  background: var(--accent-foreground);
+  color: var(--background);
 }
 
 .portal-kicker {
   margin: 0 0 0.6rem;
-  color: var(--sl-color-accent-high);
-  font-family: var(--sl-font-mono);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  color: var(--accent-foreground);
+  font-size: 0.75rem;
+  font-weight: 600;
 }
 
 .status-strip {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin: 2.2rem 0 3.5rem;
-  border: 1px solid var(--sl-color-gray-5);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
 }
 
 .status-item {
   padding: 1rem 1.15rem;
-  border-right: 1px solid var(--sl-color-gray-5);
-  background: var(--sl-color-bg-nav);
+  border-right: 1px solid var(--border);
+  background: var(--card);
 }
 
 .status-item:last-child {
@@ -159,18 +235,16 @@ nav[aria-labelledby='starlight__on-this-page'] a[aria-current='true'] span {
 
 .status-item span {
   display: block;
-  color: var(--sl-color-gray-3);
-  font-family: var(--sl-font-mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  color: var(--muted-foreground);
+  font-size: 0.75rem;
 }
 
 .status-item strong {
   display: block;
   margin-top: 0.25rem;
-  color: var(--sl-color-white);
-  font-size: 0.88rem;
+  color: var(--foreground);
+  font-size: 0.875rem;
+  font-weight: 600;
 }
 
 .portal-grid,
@@ -186,58 +260,59 @@ nav[aria-labelledby='starlight__on-this-page'] a[aria-current='true'] span {
   position: relative;
   min-height: 12rem;
   padding: 1.2rem;
-  border: 1px solid var(--sl-color-gray-5);
-  color: var(--sl-color-gray-1);
-  background: var(--sl-color-bg-nav);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--foreground);
+  background: var(--card);
   text-decoration: none;
-  transition: border-color 150ms ease, transform 150ms ease;
+  transition: border-color 150ms ease-out, background-color 150ms ease-out;
 }
 
 .portal-card:hover {
-  border-color: var(--sl-color-accent);
-  color: var(--sl-color-white);
-  transform: translateY(-3px);
+  border-color: var(--primary);
+  color: var(--foreground);
+  background: var(--accent);
 }
 
 .portal-card .index {
-  color: var(--sl-color-accent);
-  font-family: var(--sl-font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.1em;
+  color: var(--accent-foreground);
+  font-size: 0.75rem;
+  font-weight: 600;
 }
 
 .portal-card h3 {
   margin: 2.4rem 0 0.45rem;
   color: currentColor;
   font-size: 1rem;
+  font-weight: 600;
 }
 
 .portal-card p {
   margin: 0;
-  color: var(--sl-color-gray-3);
-  font-size: 0.8rem;
-  line-height: 1.45;
+  color: var(--sl-color-gray-2);
+  font-size: 0.875rem;
+  line-height: 1.5;
 }
 
 .portal-card .arrow {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  font-family: var(--sl-font-mono);
+  color: var(--accent-foreground);
 }
 
 .feature-band {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  gap: 1px;
+  gap: 0.85rem;
   margin: 1.5rem 0 3rem;
-  border: 1px solid var(--sl-color-gray-5);
-  background: var(--sl-color-gray-5);
 }
 
 .feature-band > div {
   padding: 1.4rem;
-  background: var(--sl-color-bg-nav);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
 }
 
 .feature-band h3 {
@@ -256,18 +331,15 @@ nav[aria-labelledby='starlight__on-this-page'] a[aria-current='true'] span {
   align-items: center;
   margin: 3rem 0 1rem;
   padding: 1.5rem;
-  border: 1px solid var(--sl-color-accent);
-  background: var(--sl-color-accent-low);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--accent);
 }
 
 .contribution-callout h2 {
   margin: 0;
   padding: 0;
   border: 0;
-}
-
-.contribution-callout h2::before {
-  content: none;
 }
 
 .contribution-callout p {
@@ -277,12 +349,15 @@ nav[aria-labelledby='starlight__on-this-page'] a[aria-current='true'] span {
 .contribution-callout a {
   flex: none;
   padding: 0.7rem 1rem;
-  color: var(--sl-color-black);
-  background: var(--sl-color-accent-high);
-  font-family: var(--sl-font-mono);
-  font-size: 0.78rem;
-  font-weight: 800;
+  color: var(--primary-foreground);
+  background: var(--primary);
+  font-size: 0.875rem;
   text-decoration: none;
+}
+
+.contribution-callout a:hover {
+  background: var(--accent-foreground);
+  color: var(--background);
 }
 
 .content-map {
@@ -296,20 +371,21 @@ nav[aria-labelledby='starlight__on-this-page'] a[aria-current='true'] span {
 
 .content-map li {
   padding: 0.9rem 1rem;
-  border-left: 3px solid var(--sl-color-accent);
-  background: var(--sl-color-bg-nav);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
 }
 
 .content-map strong {
   display: block;
-  color: var(--sl-color-white);
+  color: var(--foreground);
 }
 
 .content-map span {
   display: block;
   margin-top: 0.2rem;
-  color: var(--sl-color-gray-3);
-  font-size: 0.8rem;
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
 }
 
 @media (max-width: 56rem) {
@@ -317,10 +393,6 @@ nav[aria-labelledby='starlight__on-this-page'] a[aria-current='true'] span {
   .resource-grid,
   .entry-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .hero img {
-    box-shadow: 0.65rem 0.65rem 0 color-mix(in srgb, var(--sl-color-accent) 20%, transparent);
   }
 }
 
@@ -336,7 +408,7 @@ nav[aria-labelledby='starlight__on-this-page'] a[aria-current='true'] span {
 
   .status-item {
     border-right: 0;
-    border-bottom: 1px solid var(--sl-color-gray-5);
+    border-bottom: 1px solid var(--border);
   }
 
   .status-item:last-child {
@@ -362,11 +434,9 @@ nav[aria-labelledby='starlight__on-this-page'] a[aria-current='true'] span {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  .portal-card {
+  .portal-card,
+  .sl-link-button,
+  .contribution-callout a {
     transition: none;
   }
 }

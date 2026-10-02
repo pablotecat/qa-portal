@@ -27,11 +27,11 @@ export default defineConfig({
       customCss: ['./src/styles/global.css'],
       tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 3 },
       lastUpdated: true,
-      expressiveCode: {
-        styleOverrides: { borderRadius: '0.25rem' },
-      },
       head: [
-        { tag: 'meta', attrs: { name: 'theme-color', content: '#0b1f26' } },
+        { tag: 'link', attrs: { rel: 'preconnect', href: 'https://fonts.googleapis.com' } },
+        { tag: 'link', attrs: { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' } },
+        { tag: 'link', attrs: { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap' } },
+        { tag: 'meta', attrs: { name: 'theme-color', content: '#2f69ff' } },
         { tag: 'meta', attrs: { name: 'color-scheme', content: 'light dark' } },
       ],
       ...(repositoryUrl && {

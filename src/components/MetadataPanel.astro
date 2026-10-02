@@ -46,20 +46,18 @@ const fields = [
 <style>
   .metadata-panel {
     margin: 1.5rem 0 2rem;
-    border: 1px solid var(--sl-color-gray-5);
-    background: var(--sl-color-bg-nav);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--card);
   }
 
   .metadata-heading {
     margin: 0;
     padding: 0.65rem 1rem;
-    border-bottom: 1px solid var(--sl-color-gray-5);
-    color: var(--sl-color-accent-high);
-    font-family: var(--sl-font-mono);
-    font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    border-bottom: 1px solid var(--border);
+    color: var(--foreground);
+    font-size: 0.875rem;
+    font-weight: 600;
   }
 
   dl {
@@ -71,7 +69,7 @@ const fields = [
   dl div {
     min-width: 0;
     padding: 0.85rem 1rem;
-    border-right: 1px solid var(--sl-color-gray-5);
+    border-right: 1px solid var(--border);
   }
 
   dl div:last-child {
@@ -79,17 +77,14 @@ const fields = [
   }
 
   dt {
-    color: var(--sl-color-gray-3);
-    font-family: var(--sl-font-mono);
-    font-size: 0.66rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+    color: var(--muted-foreground);
+    font-size: 0.75rem;
   }
 
   dd {
     margin: 0.25rem 0 0;
-    color: var(--sl-color-white);
-    font-size: 0.82rem;
+    color: var(--foreground);
+    font-size: 0.875rem;
     overflow-wrap: anywhere;
   }
 
@@ -102,10 +97,11 @@ const fields = [
 
   .tags span {
     padding: 0.15rem 0.45rem;
-    border: 1px solid var(--sl-color-gray-5);
-    color: var(--sl-color-gray-2);
-    font-family: var(--sl-font-mono);
-    font-size: 0.7rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--secondary);
+    color: var(--foreground);
+    font-size: 0.75rem;
   }
 
   @media (max-width: 60rem) {
@@ -114,7 +110,7 @@ const fields = [
     }
 
     dl div {
-      border-bottom: 1px solid var(--sl-color-gray-5);
+      border-bottom: 1px solid var(--border);
     }
   }
 
