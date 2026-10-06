@@ -50,14 +50,20 @@ export default defineConfig({
         {
           label: 'Practice Library',
           items: [
-            { label: 'Testing Practices', slug: 'testing-practices' },
-            { label: 'Functional & Exploratory', slug: 'testing-practices/functional-exploratory' },
-            { label: 'Test Automation', slug: 'testing-practices/test-automation' },
-            { label: 'API, Integration & Contract', slug: 'testing-practices/api-integration-contract' },
-            { label: 'Performance & Load', slug: 'testing-practices/performance-load' },
-            { label: 'Security Testing', slug: 'testing-practices/security' },
-            { label: 'Accessibility Testing', slug: 'testing-practices/accessibility' },
-            { label: 'Guides & Best Practices', slug: 'guides' },
+            {
+              label: 'Testing Practices',
+              items: [
+                { label: 'Overview', slug: 'testing-practices' },
+                { label: 'Functional & Exploratory', items: [{ label: 'Overview', slug: 'testing-practices/functional-exploratory' }] },
+                { label: 'Test Automation', items: [{ label: 'Overview', slug: 'testing-practices/test-automation' }] },
+                { label: 'API, Integration & Contract', items: [{ label: 'Overview', slug: 'testing-practices/api-integration-contract' }] },
+                { label: 'Performance & Load', items: [{ label: 'Overview', slug: 'testing-practices/performance-load' }] },
+                { label: 'Security Testing', items: [{ label: 'Overview', slug: 'testing-practices/security' }] },
+                { label: 'Accessibility Testing', items: [{ label: 'Overview', slug: 'testing-practices/accessibility' }] },
+                { label: 'Test Plans & Reports', items: [{ label: 'Overview', slug: 'testing-practices/test-plan-reports' }] },
+              ],
+            },
+            { label: 'Guides & Best Practices', items: [{ label: 'Overview', slug: 'guides' }] },
           ],
         },
         {
