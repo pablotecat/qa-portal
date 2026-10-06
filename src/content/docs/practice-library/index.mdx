@@ -1,6 +1,6 @@
 ---
-title: Testing Practices
-description: Directory of testing practice sections with room for focused pages under each discipline.
+title: Practice Library
+description: Directory of QA practice sections with room for focused pages under each discipline.
 owner: 'TODO: Add owner'
 status: 'Placeholder structure'
 scope: 'Cross-project'
@@ -23,10 +23,11 @@ import PlaceholderNotice from '../../../components/PlaceholderNotice.astro';
   <a class="portal-card" href="./security/"><span class="index">PRACTICE / 05</span><span class="arrow" aria-hidden="true">↗</span><h3>Security Testing</h3><p>Reserved for approved security testing scope and escalation paths.</p></a>
   <a class="portal-card" href="./accessibility/"><span class="index">PRACTICE / 06</span><span class="arrow" aria-hidden="true">↗</span><h3>Accessibility Testing</h3><p>Reserved for accessibility expectations, methods, and evidence.</p></a>
   <a class="portal-card" href="./test-plan-reports/"><span class="index">PRACTICE / 07</span><span class="arrow" aria-hidden="true">↗</span><h3>Test Plans & Reports</h3><p>Reserved for test planning, reporting, evidence, and reusable templates.</p></a>
+  <a class="portal-card" href="./guides/"><span class="index">GUIDES</span><span class="arrow" aria-hidden="true">↗</span><h3>Guides & Best Practices</h3><p>Reserved for practical guides, patterns, tutorials, and troubleshooting.</p></a>
 </div>
 
 ## Add a practice
 
-Add a new discipline as `testing-practices/<discipline>/index.mdx`. Add focused practices as pages inside that folder, starting from the `testing-practice.md` source template. Add the new section or page to **Practice Library** in `astro.config.mjs`.
+Add a new discipline as `practice-library/<discipline>/index.mdx`. Add focused practices as pages inside that folder, starting from the `testing-practice.md` source template. Add the new section or page to **Practice Library** in `astro.config.mjs`.
 
 Required on day one: a clear title and description. Ownership, status, scope, tags, review dates, and related links are supported but remain optional until the team approves the governance model.

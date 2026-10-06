@@ -50,20 +50,15 @@ export default defineConfig({
         {
           label: 'Practice Library',
           items: [
-            {
-              label: 'Testing Practices',
-              items: [
-                { label: 'Overview', slug: 'testing-practices' },
-                { label: 'Functional & Exploratory', items: [{ label: 'Overview', slug: 'testing-practices/functional-exploratory' }] },
-                { label: 'Test Automation', items: [{ label: 'Overview', slug: 'testing-practices/test-automation' }] },
-                { label: 'API, Integration & Contract', items: [{ label: 'Overview', slug: 'testing-practices/api-integration-contract' }] },
-                { label: 'Performance & Load', items: [{ label: 'Overview', slug: 'testing-practices/performance-load' }] },
-                { label: 'Security Testing', items: [{ label: 'Overview', slug: 'testing-practices/security' }] },
-                { label: 'Accessibility Testing', items: [{ label: 'Overview', slug: 'testing-practices/accessibility' }] },
-                { label: 'Test Plans & Reports', items: [{ label: 'Overview', slug: 'testing-practices/test-plan-reports' }] },
-              ],
-            },
-            { label: 'Guides & Best Practices', items: [{ label: 'Overview', slug: 'guides' }] },
+            { label: 'Overview', slug: 'practice-library' },
+            { label: 'Functional & Exploratory', items: [{ label: 'Overview', slug: 'practice-library/functional-exploratory' }] },
+            { label: 'Test Automation', items: [{ label: 'Overview', slug: 'practice-library/test-automation' }] },
+            { label: 'API, Integration & Contract', items: [{ label: 'Overview', slug: 'practice-library/api-integration-contract' }] },
+            { label: 'Performance & Load', items: [{ label: 'Overview', slug: 'practice-library/performance-load' }] },
+            { label: 'Security Testing', items: [{ label: 'Overview', slug: 'practice-library/security' }] },
+            { label: 'Accessibility Testing', items: [{ label: 'Overview', slug: 'practice-library/accessibility' }] },
+            { label: 'Test Plans & Reports', items: [{ label: 'Overview', slug: 'practice-library/test-plan-reports' }] },
+            { label: 'Guides & Best Practices', items: [{ label: 'Overview', slug: 'practice-library/guides' }] },
           ],
         },
         {
